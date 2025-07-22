@@ -84,7 +84,7 @@ def start(store_obj):
                 # Add to shopping list
                 product = active_products[product_index]
                 shopping_list.append((product, quantity))
-                print("Product added to list!")
+                print("Product added to order list!")
 
             # Process the order if shopping list is not empty
             if shopping_list:
@@ -125,4 +125,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
