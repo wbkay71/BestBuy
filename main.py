@@ -91,8 +91,8 @@ def start(store_obj):
                 try:
                     total_price = store_obj.order(shopping_list)
                     print(f"\nOrder made! Total payment: ${total_price}")
-                except Exception as e:
-                    print(f"\nError while making order: {e}")
+                except Exception as error:
+                    print(f"\nError while making order: {error}")
             else:
                 print("\nNo items ordered.")
 
@@ -125,3 +125,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
