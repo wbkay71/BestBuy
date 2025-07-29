@@ -27,7 +27,7 @@ def start(store_obj):
             print("\n------")
             active_products = store_obj.get_all_products()
             for product in active_products:
-                product.show()
+                print(product.show())
             print("------")
 
         elif choice == "2":
@@ -43,8 +43,7 @@ def start(store_obj):
             print("\n------")
             # Show available products with numbers
             for i, product in enumerate(active_products):
-                print(f"{i + 1}. ", end="")
-                product.show()
+                print(f"{i + 1}. {product.show()}")
             print("------")
 
             print("When you want to finish order, enter empty text.")
@@ -84,7 +83,7 @@ def start(store_obj):
                 # Add to shopping list
                 product = active_products[product_index]
                 shopping_list.append((product, quantity))
-                print("Product added to order list!")
+                print("Product added to list!")
 
             # Process the order if shopping list is not empty
             if shopping_list:

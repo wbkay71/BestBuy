@@ -74,9 +74,12 @@ class Product:
 
     def show(self):
         """
-        Print a string representation of the product.
+        Return a string representation of the product.
+
+        Returns:
+            str: Formatted product information
         """
-        print(f"{self.name}, Price: {self.price}, Quantity: {self.quantity}")
+        return f"{self.name}, Price: {self.price}, Quantity: {self.quantity}"
 
     def buy(self, quantity) -> float:
         """
@@ -124,9 +127,9 @@ if __name__ == "__main__":
     print(mac.is_active())  # Should print: False (because quantity is now 0)
 
     # Show products
-    bose.show()  # Bose QuietComfort Earbuds, Price: 250, Quantity: 450
-    mac.show()  # MacBook Air M2, Price: 1450, Quantity: 0
+    print(bose.show())  # Bose QuietComfort Earbuds, Price: 250, Quantity: 450
+    print(mac.show())  # MacBook Air M2, Price: 1450, Quantity: 0
 
     # Update quantity
     bose.set_quantity(1000)
-    bose.show()  # Bose QuietComfort Earbuds, Price: 250, Quantity: 1000
+    print(bose.show())  # Bose QuietComfort Earbuds, Price: 250, Quantity: 1000
